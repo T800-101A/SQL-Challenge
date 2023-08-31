@@ -8,52 +8,50 @@ DROP TABLE IF EXISTS salaries;
 DROP TABLE IF EXISTS titles;
 
 
+
 --------------------------------- Creation of the 6 Tables : ---------------------------------
 
 CREATE TABLE "titles" (
     "title_id" VARCHAR(50)   NOT NULL,
     "title" VARCHAR(255)   NOT NULL,
-    CONSTRAINT "pk_titles" PRIMARY KEY (
-        "title_id"
-     )
+    CONSTRAINT "pk_titles" PRIMARY KEY ("title_id")
 );
 
+
 CREATE TABLE "employees" (
-    "emp_no" VARCHAR(25)  NOT NULL,
+    "emp_no" INT  NOT NULL,
     "emp_tittle_id" VARCHAR(50),
-    "birth_date" VARCHAR(10) ,
-    "first_name" VARCHAR(255)   NOT NULL,
-    "last_name" VARCHAR(255)   NOT NULL,
-    "sex"   VARCHAR(3) ,
+    "birth_date" VARCHAR(10) NOT NULL,
+    "first_name" VARCHAR(20)   NOT NULL,
+    "last_name" VARCHAR(20)   NOT NULL,
+    "sex"   VARCHAR(3) NOT NULL,
     "hire_date" VARCHAR(10)   NOT NULL,
-    CONSTRAINT "pk_employees" PRIMARY KEY (
-        "emp_no"
-     )
+    CONSTRAINT "pk_employees" PRIMARY KEY ("emp_no")
 );
+
 
 CREATE TABLE "departments" (
     "dept_no" VARCHAR(5)   NOT NULL,
     "dept_name" VARCHAR(25)   NOT NULL,
-    CONSTRAINT "pk_departments" PRIMARY KEY (
-   
-        "dept_no"
-     )
+    CONSTRAINT "pk_departments" PRIMARY KEY ("dept_no")
 );
 
 
 CREATE TABLE "dept_manager" (
     "dept_no" VARCHAR(5)  NOT NULL,
-    "emp_no" VARCHAR(25)   NOT NULL);
+    "emp_no" INT   NOT NULL);
+   
 
 CREATE TABLE "dept_emp" (
-    "emp_no" VARCHAR(25)  NOT NULL,
-    "dept_no" VARCHAR(5)   NOT null
-   
-    );
+    "emp_no" INT  NOT NULL,
+    "dept_no" VARCHAR(5)   NOT NULL
+);
+
+
 
 CREATE TABLE "salaries" (
-    "emp_no" VARCHAR(25)  NOT NULL,
-    "salary" int  
+    "emp_no" INT  NOT NULL,
+    "salary" INT  NOT NULL
 );
 
 
