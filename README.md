@@ -1,9 +1,9 @@
 # SQL-Challenge
 This Challenge is divided into three parts: Data Modeling, Data Engineering, and Data Analysis.
 
+![ERD](https://github.com/T800-101A/SQL-Challenge/assets/122810519/6e7521dc-3d54-4d37-9b46-3c58526f771d)
 
 
-![ERD](https://github.com/T800-101A/SQL-Challenge/assets/122810519/e84c8f19-d731-45b5-9921-c4ed53627dba)
 
 
 It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company). Your first major task is to do a research project about people whom the company employed during the 1980s and 1990s. All that remains of the employee database from that period are six CSV files.
